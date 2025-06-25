@@ -1,8 +1,8 @@
 const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
+	'Wedding Reels',
+	'Instagram Reels',
+	'Long Video edits',
+
 ];
 
 const ProjectsFilter = ({ setSelectProject }) => {
