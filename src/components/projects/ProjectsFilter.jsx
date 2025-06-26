@@ -1,8 +1,7 @@
 const selectOptions = [
 	'Wedding Reels',
 	'Instagram Reels',
-	'Long Video edits',
-
+	'Long Video Edits',
 ];
 
 const ProjectsFilter = ({ setSelectProject }) => {
