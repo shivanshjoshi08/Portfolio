@@ -1,7 +1,11 @@
 /*== 
-<<<<<<< HEAD
  * Portfolio CSS — Video & Photo Editor
 */
+
+html,
+body {
+	overflow-x: hidden;
+}
 
 /* ===== Global Theme Transition ===== */
 *,
@@ -10,21 +14,12 @@
 	transition: background-color 0.35s ease, color 0.25s ease, border-color 0.35s ease, box-shadow 0.3s ease;
 }
 
-=======
- * React & TailwindCSS Portfolio Main CSS File
- * Powered by: @realstoman
-*/
 
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
 body {
 	font-family: 'GeneralSans-Variable';
 }
 
-<<<<<<< HEAD
 /* ===== Fonts ===== */
-=======
-/* Fonts */
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
 @font-face {
 	font-family: 'GeneralSans-Variable';
 	src: url('../fonts/GeneralSans-Variable.woff2') format('woff2'),
@@ -221,7 +216,6 @@ body {
 	font-family: 'GeneralSans-BoldItalic';
 }
 
-<<<<<<< HEAD
 /* ===== Hire Me Button — Clean Outline Style ===== */
 .hire-btn {
 	display: inline-flex;
@@ -483,12 +477,6 @@ body {
 .scrollToTop {
 	background: #C9943E;
 	color: #fff;
-=======
-/* Scroll to top style */
-.scrollToTop {
-	@apply bg-indigo-600;
-	@apply text-white;
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
 	position: fixed;
 	width: 100%;
 	align-items: center;
@@ -509,19 +497,14 @@ body {
 	0% {
 		opacity: 0;
 	}
-<<<<<<< HEAD
 
-=======
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
 	100% {
 		opacity: 0.5;
 	}
 }
-<<<<<<< HEAD
+
 
 /* ===== Gradient Text ===== */
 .gradient-text {
 	color: #C9943E;
 }
-=======
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e

@@ -17,11 +17,7 @@ const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 function App() {
 	return (
 		<AnimatePresence>
-<<<<<<< HEAD
-			<div className="bg-secondary-light dark:bg-primary-dark min-h-screen">
-=======
-			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
+			<div className="bg-secondary-light dark:bg-primary-dark min-h-screen overflow-x-hidden">
 				<Router>
 					<ScrollToTop />
 					<AppHeader />

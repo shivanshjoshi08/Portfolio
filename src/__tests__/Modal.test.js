@@ -14,7 +14,7 @@ test('modal shows the children and a close button', async () => {
 	const { user } = setupUserEvent(<HireMeModal />);
 
 	expect(
-		screen.getByText(/What project are you looking for?/i)
+		screen.getByText(/What project can I help you with?/i)
 	).toBeInTheDocument();
 
 	const closeModal = screen.getByText(/Close/i);

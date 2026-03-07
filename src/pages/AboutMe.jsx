@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 const About = () => {
 	return (
 		<AboutMeProvider>
-<<<<<<< HEAD
 			{/* Page Title */}
 			<motion.div
 				initial={{ opacity: 0, y: 20 }}
@@ -24,44 +23,24 @@ const About = () => {
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ ease: 'easeOut', duration: 0.6, delay: 0.2 }}
-=======
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
 				className="container mx-auto"
 			>
 				<AboutMeBio />
 			</motion.div>
 
-<<<<<<< HEAD
 			{/* Counter */}
 			<motion.div
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ ease: 'easeOut', duration: 0.6, delay: 0.3 }}
-=======
-			{/** Counter without paddings */}
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
 			>
 				<AboutCounter />
 			</motion.div>
 
 			<motion.div
-<<<<<<< HEAD
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ ease: 'easeOut', duration: 0.6, delay: 0.4 }}
-=======
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
 				className="container mx-auto"
 			>
 				<AboutClients />

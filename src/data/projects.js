@@ -12,14 +12,6 @@ export const projectsData = [
 		title: 'Teaser',
 		category: 'Wedding Reels',
 		img: WebImage2,
-<<<<<<< HEAD
-=======
-		// ProjectHeader: {
-		// 	title: 'Project Management UI - From Context',
-		// 	publishDate: 'Jul 26, 2021',
-		// 	tags: 'UI / Frontend',
-		// },
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
 	},
 	{
 		id: 2,
@@ -36,11 +28,7 @@ export const projectsData = [
 	{
 		id: 4,
 		title: 'The Banana City of India',
-<<<<<<< HEAD
 		category: 'Instagram Reels',
-=======
-		category: 'Instagram reels',
->>>>>>> 78453c88569b0fc0b5f59c9b79cdbb389015178e
 		img: UIImage2,
 	},
 	{
