@@ -12,12 +12,12 @@ const ProjectSingle = ({ title, category, image }) => {
 				delay: 0.1,
 			}}
 		>
-			<Link to="/projects/single-project" aria-label="Single Project">
-				<div className="project-card rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-secondary-dark overflow-hidden">
-					<div className="relative overflow-hidden">
+			<Link to="/projects/single-project" aria-label="Single Project" className="h-full block">
+				<div className="project-card h-full flex flex-col rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-secondary-dark overflow-hidden">
+					<div className="relative overflow-hidden shrink-0">
 						<img
 							src={image}
-							className="project-card-image rounded-t-xl border-none"
+							className="project-card-image rounded-t-xl border-none w-full aspect-[16/10] object-cover"
 							alt={title}
 						/>
 						<div className="project-card-overlay">
@@ -26,7 +26,7 @@ const ProjectSingle = ({ title, category, image }) => {
 							</span>
 						</div>
 					</div>
-					<div className="text-center px-4 py-5">
+					<div className="text-center px-4 py-5 flex-grow flex flex-col justify-center">
 						<p className="font-general-medium text-lg md:text-xl text-ternary-dark dark:text-ternary-light mb-1">
 							{title}
 						</p>

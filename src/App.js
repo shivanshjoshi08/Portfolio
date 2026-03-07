@@ -1,6 +1,8 @@
 import { AnimatePresence } from 'framer-motion';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CinematicCursor from './components/animations/CinematicCursor';
+import LightLeaks from './components/animations/LightLeaks';
 import ScrollToTop from './components/ScrollToTop';
 import AppFooter from './components/shared/AppFooter';
 import AppHeader from './components/shared/AppHeader';
@@ -13,11 +15,12 @@ const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 
-
 function App() {
 	return (
 		<AnimatePresence>
-			<div className="bg-secondary-light dark:bg-primary-dark min-h-screen overflow-x-hidden">
+			<div className="bg-secondary-light dark:bg-primary-dark min-h-screen overflow-x-hidden relative">
+				<LightLeaks />
+				<CinematicCursor />
 				<Router>
 					<ScrollToTop />
 					<AppHeader />

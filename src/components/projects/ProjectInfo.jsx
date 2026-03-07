@@ -44,12 +44,12 @@ const ProjectInfo = () => {
 					<p className="font-general-medium text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
 						{singleProjectData.ProjectInfo.Technologies[0].title}
 					</p>
-					<div className="flex flex-wrap gap-2 mt-2">
+					<div className="skills-container flex flex-wrap gap-2 mt-2">
 						{singleProjectData.ProjectInfo.Technologies[0].techs.map(
 							(tech, index) => (
 								<span
 									key={index}
-									className="px-3 py-1 text-sm font-general-medium rounded-full bg-accent-light dark:bg-ternary-dark text-accent dark:text-accent border border-accent border-opacity-30"
+									className="skill-chip px-4 py-2 bg-secondary-light dark:bg-primary-dark border border-gray-200 dark:border-secondary-dark rounded-lg text-accent dark:text-accent font-general-medium shadow-sm hover:shadow-md hover:border-accent dark:hover:border-accent duration-300"
 								>
 									{tech}
 								</span>
@@ -73,7 +73,7 @@ const ProjectInfo = () => {
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share Project"
-										className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-accent dark:hover:text-accent p-2.5 rounded-lg shadow-sm duration-300"
+										className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-accent dark:hover:text-accent p-2.5 rounded-lg shadow-sm duration-300 relative z-10"
 									>
 										<span className="text-lg lg:text-2xl">
 											{social.icon}

@@ -11,7 +11,7 @@ const ProjectGallery = () => {
 					<div className="mb-8 sm:mb-0 overflow-hidden rounded-xl" key={project.id}>
 						<img
 							src={project.img}
-							className="rounded-xl cursor-pointer shadow-lg hover:shadow-xl hover:scale-105 duration-300 w-full object-cover"
+							className="rounded-xl cursor-pointer shadow-lg hover:shadow-xl hover:scale-105 duration-300 w-full aspect-video object-cover h-full"
 							alt={project.title}
 						/>
 					</div>

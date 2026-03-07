@@ -3,6 +3,7 @@ import ProjectHeader from '../components/projects/ProjectHeader';
 import ProjectInfo from '../components/projects/ProjectInfo';
 import ProjectRelatedProjects from '../components/projects/ProjectRelatedProjects';
 import { SingleProjectProvider } from '../context/SingleProjectContext';
+import { ProjectsProvider } from '../context/ProjectsContext';
 import { motion } from 'framer-motion';
 
 const ProjectSingle = () => {
@@ -17,12 +18,14 @@ const ProjectSingle = () => {
 			}}
 			className="container mx-auto mt-5 sm:mt-10"
 		>
-			<SingleProjectProvider>
-				<ProjectHeader />
-				<ProjectGallery />
-				<ProjectInfo />
-				<ProjectRelatedProjects />
-			</SingleProjectProvider>
+			<ProjectsProvider>
+				<SingleProjectProvider>
+					<ProjectHeader />
+					<ProjectGallery />
+					<ProjectInfo />
+					<ProjectRelatedProjects />
+				</SingleProjectProvider>
+			</ProjectsProvider>
 		</motion.div>
 	);
 };

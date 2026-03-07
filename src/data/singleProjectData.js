@@ -14,6 +14,7 @@ import {
 } from 'react-icons/fi';
 
 export const singleProjectData = {
+	category: 'Wedding Reels',
 	ProjectHeader: {
 		title: 'Wedding Cinematic Teaser',
 		publishDate: 'Jan 15, 2024',
