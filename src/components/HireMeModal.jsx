@@ -2,7 +2,6 @@ import { useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
-import Button from './reusable/Button';
 
 const selectOptions = [
 	'Wedding Video',
@@ -125,7 +124,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 								className="btn-accent px-6 py-2.5 rounded-lg cursor-pointer inline-block"
 								aria-label="Submit Request"
 							>
-								<Button title="Send Request" />
+								Send Request
 							</span>
 						</div>
 					</form>
@@ -137,7 +136,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 						className="px-6 py-2 bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-ternary-dark dark:text-secondary-light dark:hover:bg-secondary-dark rounded-lg cursor-pointer duration-300 inline-block"
 						aria-label="Close Modal"
 					>
-						<Button title="Close" />
+						Close
 					</span>
 				</div>
 			</motion.div>
