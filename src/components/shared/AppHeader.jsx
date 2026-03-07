@@ -8,20 +8,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 const AppHeader = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
-	const [activeTheme, setTheme] = useThemeSwitcher();
+	const [theme, setTheme] = useThemeSwitcher();
 
 	function toggleMenu() {
 		setShowMenu(!showMenu);
 	}
 
-	function showHireMeModal() {
-		if (!showModal) {
-			document.getElementsByTagName('html')[0].classList.add('overflow-y-hidden');
-			setShowModal(true);
-		} else {
-			document.getElementsByTagName('html')[0].classList.remove('overflow-y-hidden');
-			setShowModal(false);
-		}
+	function toggleTheme() {
+		setTheme(theme === 'dark' ? 'light' : 'dark');
+	}
+
+	function toggleHireMeModal() {
+		setShowModal((prev) => !prev);
 	}
 
 	return (
@@ -45,14 +43,14 @@ const AppHeader = () => {
 					{/* Theme switcher + hamburger — small screen */}
 					<div className="flex items-center gap-3 sm:hidden">
 						<div
-							onClick={() => setTheme(activeTheme)}
+							onClick={toggleTheme}
 							aria-label="Theme Switcher"
 							className="theme-toggle bg-ternary-light dark:bg-ternary-dark p-2.5 rounded-xl cursor-pointer"
 						>
-							{activeTheme === 'dark' ? (
-								<FiMoon className="text-primary-dark dark:text-gray-300 text-xl" />
+							{theme === 'light' ? (
+								<FiMoon className="text-primary-dark text-xl" />
 							) : (
-								<FiSun className="text-gray-500 text-xl" />
+								<FiSun className="text-gray-300 text-xl" />
 							)}
 						</div>
 
@@ -115,7 +113,7 @@ const AppHeader = () => {
 								<div className="border-t border-ternary-light dark:border-ternary-dark pt-3">
 									<button
 										onClick={() => {
-											showHireMeModal();
+											toggleHireMeModal();
 											setShowMenu(false);
 										}}
 										className="hire-btn font-general-medium text-sm mt-2"
@@ -158,7 +156,7 @@ const AppHeader = () => {
 				<div className="hidden sm:flex justify-between items-center flex-col md:flex-row gap-4">
 					<div className="hidden md:flex">
 						<button
-							onClick={showHireMeModal}
+							onClick={toggleHireMeModal}
 							className="hire-btn font-general-medium text-sm"
 							aria-label="Hire Me Button"
 						>
@@ -168,27 +166,27 @@ const AppHeader = () => {
 
 					{/* Theme switcher large screen */}
 					<div
-						onClick={() => setTheme(activeTheme)}
+						onClick={toggleTheme}
 						aria-label="Theme Switcher"
 						className="theme-toggle bg-ternary-light dark:bg-ternary-dark p-3 rounded-xl cursor-pointer"
 					>
-						{activeTheme === 'dark' ? (
-							<FiMoon className="text-primary-dark dark:text-gray-300 text-xl" />
+						{theme === 'light' ? (
+							<FiMoon className="text-primary-dark text-xl" />
 						) : (
-							<FiSun className="text-gray-500 hover:text-gray-700 text-xl" />
+							<FiSun className="text-gray-300 hover:text-white text-xl" />
 						)}
 					</div>
 				</div>
 			</div>
 			{/* Hire me modal */}
-			<div>
-				{showModal ? (
+			<AnimatePresence>
+				{showModal && (
 					<HireMeModal
-						onClose={showHireMeModal}
-						onRequest={showHireMeModal}
+						onClose={toggleHireMeModal}
+						onRequest={toggleHireMeModal}
 					/>
-				) : null}
-			</div>
+				)}
+			</AnimatePresence>
 		</motion.nav>
 	);
 };
