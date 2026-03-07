@@ -42,7 +42,7 @@ const ProjectsGrid = () => {
 							onChange={(e) => {
 								setSearchProject(e.target.value);
 							}}
-							className="font-general-medium pl-3 pr-1 sm:px-4 py-2 border border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
+							className="font-general-medium pl-3 pr-1 sm:px-4 py-2 border border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-gray-900 dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
 							id="name"
 							name="name"
 							type="search"

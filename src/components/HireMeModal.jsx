@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
@@ -28,35 +28,34 @@ const HireMeModal = ({ onClose, onRequest }) => {
 		return () => document.documentElement.classList.remove('overflow-y-hidden');
 	}, []);
 
-	return createPortal(
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			className="font-general-medium fixed inset-0 z-[100] flex items-center justify-center p-4"
-		>
-			{/* Modal Backdrop */}
-			<div
-				style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-				className="absolute inset-0 cursor-pointer"
-				onMouseDown={onClose}
-			></div>
+	// Handle backdrop click — close only if clicking directly on the overlay
+	const handleBackdropClick = useCallback((e) => {
+		if (e.target === e.currentTarget) {
+			onClose();
+		}
+	}, [onClose]);
 
+	return createPortal(
+		<div
+			className="modal-overlay fixed inset-0 z-[100] flex items-center justify-center p-4"
+			onClick={handleBackdropClick}
+			style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+		>
 			{/* Modal Content */}
 			<motion.div
 				initial={{ opacity: 0, scale: 0.95, y: 20 }}
 				animate={{ opacity: 1, scale: 1, y: 0 }}
 				exit={{ opacity: 0, scale: 0.95, y: 20 }}
 				transition={{ duration: 0.25, ease: 'easeOut' }}
-				className="modal relative z-10 w-full max-w-md xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark shadow-lg flex flex-col rounded-xl overflow-hidden max-h-[90vh]"
+				className="font-general-medium modal relative w-full max-w-md xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark shadow-lg flex flex-col rounded-xl overflow-hidden max-h-[90vh]"
 			>
 				<div className="modal-header shrink-0 flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
-					<h5 className="text-primary-dark dark:text-primary-light text-xl">
+					<h5 className="text-gray-900 dark:text-primary-light text-xl">
 						What project can I help you with?
 					</h5>
 					<button
 						onClick={onClose}
-						className="px-4 font-bold text-primary-dark dark:text-primary-light hover:text-accent"
+						className="px-4 font-bold text-gray-900 dark:text-primary-light hover:text-accent"
 					>
 						<FiX className="text-3xl" />
 					</button>
@@ -70,7 +69,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 					>
 						<div>
 							<input
-								className="w-full px-5 py-2.5 border dark:border-secondary-dark rounded-lg text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
+								className="w-full px-5 py-2.5 border dark:border-secondary-dark rounded-lg text-md bg-secondary-light dark:bg-ternary-dark text-gray-900 dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
 								id="name"
 								name="name"
 								type="text"
@@ -81,7 +80,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 						</div>
 						<div className="mt-5">
 							<input
-								className="w-full px-5 py-2.5 border dark:border-secondary-dark rounded-lg text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
+								className="w-full px-5 py-2.5 border dark:border-secondary-dark rounded-lg text-md bg-secondary-light dark:bg-ternary-dark text-gray-900 dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
 								id="email"
 								name="email"
 								type="text"
@@ -92,7 +91,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 						</div>
 						<div className="mt-5">
 							<select
-								className="w-full px-5 py-2.5 border dark:border-secondary-dark rounded-lg text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
+								className="w-full px-5 py-2.5 border dark:border-secondary-dark rounded-lg text-md bg-secondary-light dark:bg-ternary-dark text-gray-900 dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
 								id="subject"
 								name="subject"
 								type="text"
@@ -109,7 +108,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 
 						<div className="mt-5">
 							<textarea
-								className="w-full px-5 py-2.5 border dark:border-secondary-dark rounded-lg text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
+								className="w-full px-5 py-2.5 border dark:border-secondary-dark rounded-lg text-md bg-secondary-light dark:bg-ternary-dark text-gray-900 dark:text-ternary-light focus:ring-1 focus:ring-accent focus:border-accent"
 								id="message"
 								name="message"
 								cols="14"
@@ -135,14 +134,14 @@ const HireMeModal = ({ onClose, onRequest }) => {
 					<span
 						onClick={onClose}
 						type="button"
-						className="px-6 py-2 bg-gray-200 text-primary-dark hover:bg-gray-300 dark:bg-ternary-dark dark:text-secondary-light dark:hover:bg-secondary-dark rounded-lg cursor-pointer duration-300 inline-block"
+						className="px-6 py-2 bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-ternary-dark dark:text-secondary-light dark:hover:bg-secondary-dark rounded-lg cursor-pointer duration-300 inline-block"
 						aria-label="Close Modal"
 					>
 						<Button title="Close" />
 					</span>
 				</div>
 			</motion.div>
-		</motion.div>,
+		</div>,
 		document.body
 	);
 };

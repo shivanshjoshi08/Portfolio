@@ -34,7 +34,7 @@ const ProjectInfo = () => {
 					<p className="font-general-medium text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
 						{singleProjectData.ProjectInfo.ObjectivesHeading}
 					</p>
-					<p className="font-general-regular text-primary-dark dark:text-ternary-light leading-relaxed">
+					<p className="font-general-regular text-gray-900 dark:text-ternary-light leading-relaxed">
 						{singleProjectData.ProjectInfo.ObjectivesDetails}
 					</p>
 				</div>
@@ -88,7 +88,7 @@ const ProjectInfo = () => {
 
 			{/*  Single project right section */}
 			<div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
-				<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl font-bold mb-7 section-title-underline inline-block">
+				<p className="font-general-medium text-gray-900 dark:text-primary-light text-2xl font-bold mb-7 section-title-underline inline-block">
 					{singleProjectData.ProjectInfo.ProjectDetailsHeading}
 				</p>
 				{singleProjectData.ProjectInfo.ProjectDetails.map((details) => {

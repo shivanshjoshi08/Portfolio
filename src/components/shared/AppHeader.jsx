@@ -35,7 +35,7 @@ const AppHeader = () => {
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					{/* Logo — text-based for perfect theme matching */}
 					<Link to="/" className="group">
-						<span className="font-general-bold text-2xl text-primary-dark dark:text-gray-100 tracking-tight group-hover:text-accent duration-300">
+						<span className="font-general-bold text-2xl text-gray-900 dark:text-gray-100 tracking-tight group-hover:text-accent duration-300">
 							<span className="text-accent">K</span>amal
 						</span>
 					</Link>
@@ -48,7 +48,7 @@ const AppHeader = () => {
 							className="theme-toggle bg-ternary-light dark:bg-ternary-dark p-2.5 rounded-xl cursor-pointer"
 						>
 							{theme === 'light' ? (
-								<FiMoon className="text-primary-dark text-xl" />
+								<FiMoon className="text-gray-900 text-xl" />
 							) : (
 								<FiSun className="text-gray-300 text-xl" />
 							)}
@@ -63,7 +63,7 @@ const AppHeader = () => {
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
-								className="h-7 w-7 fill-current text-primary-dark dark:text-gray-300"
+								className="h-7 w-7 fill-current text-gray-900 dark:text-gray-300"
 							>
 								{showMenu ? (
 									<FiX className="text-3xl" />
@@ -88,7 +88,7 @@ const AppHeader = () => {
 							<div className="m-0 mt-4 p-5 shadow-lg rounded-xl bg-secondary-light dark:bg-secondary-dark">
 								<Link
 									to="/projects"
-									className="block text-left text-lg text-primary-dark dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 py-2"
+									className="block text-left text-lg text-gray-900 dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 py-2"
 									aria-label="Projects"
 									onClick={() => setShowMenu(false)}
 								>
@@ -96,7 +96,7 @@ const AppHeader = () => {
 								</Link>
 								<Link
 									to="/about"
-									className="block text-left text-lg text-primary-dark dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 py-2 border-t border-ternary-light dark:border-ternary-dark pt-3"
+									className="block text-left text-lg text-gray-900 dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 py-2 border-t border-ternary-light dark:border-ternary-dark pt-3"
 									aria-label="About Me"
 									onClick={() => setShowMenu(false)}
 								>
@@ -104,7 +104,7 @@ const AppHeader = () => {
 								</Link>
 								<Link
 									to="/contact"
-									className="block text-left text-lg text-primary-dark dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 py-2 border-t border-ternary-light dark:border-ternary-dark pt-3"
+									className="block text-left text-lg text-gray-900 dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 py-2 border-t border-ternary-light dark:border-ternary-dark pt-3"
 									aria-label="Contact"
 									onClick={() => setShowMenu(false)}
 								>
@@ -131,21 +131,21 @@ const AppHeader = () => {
 				<div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center">
 					<Link
 						to="/projects"
-						className="block text-left text-lg text-primary-dark dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg text-gray-900 dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 sm:py-2"
 						aria-label="Projects"
 					>
 						Projects
 					</Link>
 					<Link
 						to="/about"
-						className="block text-left text-lg text-primary-dark dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg text-gray-900 dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 sm:py-2"
 						aria-label="About Me"
 					>
 						About Me
 					</Link>
 					<Link
 						to="/contact"
-						className="block text-left text-lg text-primary-dark dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg text-gray-900 dark:text-gray-300 hover:text-accent dark:hover:text-accent sm:mx-4 mb-2 sm:py-2"
 						aria-label="Contact"
 					>
 						Contact
@@ -171,7 +171,7 @@ const AppHeader = () => {
 						className="theme-toggle bg-ternary-light dark:bg-ternary-dark p-3 rounded-xl cursor-pointer"
 					>
 						{theme === 'light' ? (
-							<FiMoon className="text-primary-dark text-xl" />
+							<FiMoon className="text-gray-900 text-xl" />
 						) : (
 							<FiSun className="text-gray-300 hover:text-white text-xl" />
 						)}

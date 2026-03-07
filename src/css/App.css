@@ -5,6 +5,13 @@
 html,
 body {
 	overflow-x: hidden;
+	max-width: 100vw;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 /* ===== Global Theme Transition ===== */
@@ -12,6 +19,11 @@ body {
 *::before,
 *::after {
 	transition: background-color 0.35s ease, color 0.25s ease, border-color 0.35s ease, box-shadow 0.3s ease;
+}
+
+/* Override global transition for modal overlay so backdrop appears instantly */
+.modal-overlay {
+	transition: none !important;
 }
 
 
@@ -221,9 +233,9 @@ body {
 	display: inline-flex;
 	align-items: center;
 	padding: 0.55rem 1.5rem;
-	border: 1.5px solid #C9943E;
+	border: 1.5px solid #f59e0b;
 	border-radius: 0.5rem;
-	color: #C9943E;
+	color: #f59e0b;
 	background: transparent;
 	cursor: pointer;
 	letter-spacing: 0.02em;
@@ -231,20 +243,20 @@ body {
 }
 
 .hire-btn:hover {
-	background: #C9943E;
+	background: #f59e0b;
 	color: #fff;
-	box-shadow: 0 4px 16px rgba(201, 148, 62, 0.25);
+	box-shadow: 0 4px 16px rgba(245, 158, 11, 0.25);
 }
 
 .dark .hire-btn {
-	border-color: #C9943E;
-	color: #C9943E;
+	border-color: #f59e0b;
+	color: #f59e0b;
 }
 
 .dark .hire-btn:hover {
-	background: #C9943E;
+	background: #f59e0b;
 	color: #fff;
-	box-shadow: 0 4px 16px rgba(201, 148, 62, 0.3);
+	box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
 }
 
 /* ===== Hero Section ===== */
@@ -260,7 +272,7 @@ body {
 }
 
 .dark .hero-visual {
-	background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 50%, #3a3a3a 100%);
+	background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
 }
 
 .hero-visual::before {
@@ -271,15 +283,15 @@ body {
 		repeating-linear-gradient(0deg,
 			transparent,
 			transparent 28px,
-			rgba(201, 148, 62, 0.06) 28px,
-			rgba(201, 148, 62, 0.06) 30px);
+			rgba(245, 158, 11, 0.06) 28px,
+			rgba(245, 158, 11, 0.06) 30px);
 	pointer-events: none;
 }
 
 .hero-play-icon {
 	width: 72px;
 	height: 72px;
-	border: 2px solid rgba(201, 148, 62, 0.5);
+	border: 2px solid rgba(245, 158, 11, 0.5);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -294,7 +306,7 @@ body {
 	height: 0;
 	border-style: solid;
 	border-width: 12px 0 12px 20px;
-	border-color: transparent transparent transparent #C9943E;
+	border-color: transparent transparent transparent #f59e0b;
 	margin-left: 4px;
 }
 
@@ -302,7 +314,7 @@ body {
 	content: '';
 	position: absolute;
 	inset: -14px;
-	border: 1px solid rgba(201, 148, 62, 0.2);
+	border: 1px solid rgba(245, 158, 11, 0.2);
 	border-radius: 50%;
 	animation: pulse-ring 3s ease-in-out infinite 0.6s;
 }
@@ -335,9 +347,9 @@ body {
 
 .hero-film-frame {
 	flex: 1;
-	background: rgba(201, 148, 62, 0.1);
+	background: rgba(245, 158, 11, 0.1);
 	border-radius: 3px;
-	border: 1px solid rgba(201, 148, 62, 0.15);
+	border: 1px solid rgba(245, 158, 11, 0.15);
 }
 
 .hero-glow {
@@ -345,7 +357,7 @@ body {
 	width: 180px;
 	height: 180px;
 	border-radius: 50%;
-	background: radial-gradient(circle, rgba(201, 148, 62, 0.1) 0%, transparent 70%);
+	background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
 	top: -30px;
 	right: -30px;
 	pointer-events: none;
@@ -360,8 +372,8 @@ body {
 }
 
 .dark .glass-nav {
-	background: rgba(26, 26, 26, 0.9);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+	background: rgba(15, 23, 42, 0.92);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* ===== Project Card Overlay ===== */
@@ -402,7 +414,7 @@ body {
 
 /* ===== Accent Button (filled) ===== */
 .btn-accent {
-	background: #C9943E;
+	background: #f59e0b;
 	color: #fff;
 	border: none;
 	border-radius: 0.5rem;
@@ -412,9 +424,9 @@ body {
 }
 
 .btn-accent:hover {
-	background: #B8842F;
+	background: #d97706;
 	transform: translateY(-1px);
-	box-shadow: 0 6px 20px rgba(201, 148, 62, 0.3);
+	box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
 }
 
 /* ===== Section Titles ===== */
@@ -431,7 +443,7 @@ body {
 	transform: translateX(-50%);
 	width: 50px;
 	height: 2.5px;
-	background: #C9943E;
+	background: #f59e0b;
 	border-radius: 2px;
 }
 
@@ -448,34 +460,42 @@ body {
 .profile-image {
 	border-radius: 1rem;
 	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-	border: 2px solid rgba(201, 148, 62, 0.2);
+	border: 2px solid rgba(245, 158, 11, 0.2);
 }
 
 .dark .profile-image {
 	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
-	border-color: rgba(201, 148, 62, 0.3);
+	border-color: rgba(245, 158, 11, 0.3);
 }
 
 /* ===== About Section Skills Chip ===== */
+.skills-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	max-width: 100%;
+}
+
 .skill-chip {
-	display: inline-flex;
-	align-items: center;
+	display: inline-block;
 	padding: 0.4rem 1rem;
 	border-radius: 999px;
 	font-size: 0.875rem;
-	border: 1px solid rgba(201, 148, 62, 0.25);
-	color: #C9943E;
-	background: rgba(201, 148, 62, 0.06);
+	white-space: nowrap;
+	border: 1px solid rgba(245, 158, 11, 0.25);
+	color: #f59e0b;
+	background: rgba(245, 158, 11, 0.06);
 }
 
 .dark .skill-chip {
-	background: rgba(201, 148, 62, 0.08);
-	border-color: rgba(201, 148, 62, 0.2);
+	background: rgba(245, 158, 11, 0.1);
+	border-color: rgba(245, 158, 11, 0.25);
+	color: #fbbf24;
 }
 
 /* ===== Scroll to top ===== */
 .scrollToTop {
-	background: #C9943E;
+	background: #f59e0b;
 	color: #fff;
 	position: fixed;
 	width: 100%;
@@ -506,5 +526,5 @@ body {
 
 /* ===== Gradient Text ===== */
 .gradient-text {
-	color: #C9943E;
+	color: #f59e0b;
 }

@@ -11,16 +11,16 @@ module.exports = {
 				'secondary-light': '#FAF9F7',
 				'ternary-light': '#EDEAE5',
 
-				// Dark theme — warm charcoal, not harsh blue-black
-				'primary-dark': '#1A1A1A',
-				'secondary-dark': '#222222',
-				'ternary-dark': '#2D2D2D',
+				// Dark theme — deep blue-slate for better contrast
+				'primary-dark': '#0f172a',
+				'secondary-dark': '#1e293b',
+				'ternary-dark': '#334155',
 
-				// Accent — warm, muted gold
-				'accent': '#C9943E',
-				'accent-hover': '#B8842F',
-				'accent-light': '#F5EDE0',
-				'accent-dark': '#A87630',
+				// Accent — warm amber
+				'accent': '#f59e0b',
+				'accent-hover': '#d97706',
+				'accent-light': '#fef3c7',
+				'accent-dark': '#b45309',
 			},
 			container: {
 				padding: {
