@@ -1,7 +1,5 @@
 import {
-	FiTwitter,
 	FiLinkedin,
-	FiYoutube,
 	FiInstagram,
 } from 'react-icons/fi';
 import AppFooterCopyright from './AppFooterCopyright';
@@ -10,22 +8,12 @@ const socialLinks = [
 	{
 		id: 1,
 		icon: <FiInstagram />,
-		url: 'https://www.instagram.com/kamaldeep_____/',
+		url: 'https://www.instagram.com/Joshi_raghavv/',
 	},
 	{
-		id: 3,
-		icon: <FiTwitter />,
-		url: 'https://x.com/Maharaj_29?t=cZyHx_0FfBcz8bbE2iga9A&s=09',
-	},
-	{
-		id: 4,
+		id: 2,
 		icon: <FiLinkedin />,
-		url: 'https://www.linkedin.com/in/realstoman',
-	},
-	{
-		id: 5,
-		icon: <FiYoutube />,
-		url: 'https://youtube.com/@kamal_deep29?si=gY9FtZfEpmd1KbCh',
+		url: 'https://www.linkedin.com/in/raghav-joshi-b52689394',
 	},
 ];
 

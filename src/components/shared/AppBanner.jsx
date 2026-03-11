@@ -18,7 +18,7 @@ const AppBanner = () => {
 					transition={{ ease: 'easeOut', duration: 0.7, delay: 0.1 }}
 					className="font-general-bold text-3xl lg:text-4xl xl:text-5xl text-center sm:text-left text-ternary-dark dark:text-primary-light leading-tight"
 				>
-					Hi, I'm <span className="gradient-text">Kamal</span>
+					Hi, I'm <span className="gradient-text">Raghav</span>
 				</motion.h1>
 				<motion.p
 					initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ const AppBanner = () => {
 					className="flex justify-center sm:justify-start"
 				>
 					<a
-						download="kamal-resume.pdf"
+						download="raghav-resume.pdf"
 						href="/files/kamal-resume.pdf"
 						className="font-general-medium flex justify-center items-center w-40 sm:w-48 mt-10 mb-6 sm:mb-0 text-lg border-2 border-accent dark:border-accent py-2.5 sm:py-3 shadow-lg rounded-lg bg-accent-light dark:bg-ternary-dark focus:ring-1 focus:ring-accent hover:bg-accent text-gray-600 dark:text-gray-200 hover:text-white duration-300"
 						aria-label="Download Resume"

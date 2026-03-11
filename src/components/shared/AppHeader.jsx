@@ -36,7 +36,7 @@ const AppHeader = () => {
 					{/* Logo — text-based for perfect theme matching */}
 					<Link to="/" className="group">
 						<span className="font-general-bold text-2xl text-gray-900 dark:text-gray-100 tracking-tight group-hover:text-accent duration-300">
-							<span className="text-accent">K</span>amal
+							<span className="text-accent">R</span>aghav
 						</span>
 					</Link>
 

@@ -3,16 +3,15 @@ import { useContext } from 'react';
 import AboutMeContext from '../../context/AboutMeContext';
 
 const skills = [
-	'Adobe Premiere Pro',
-	'After Effects',
-	'DaVinci Resolve',
-	'Photoshop',
-	'Lightroom',
 	'CapCut',
+	'Canva',
+	'Excel',
+	'Learning Adobe Premiere Pro',
 	'Social Media Strategy',
 	'Content Planning',
-	'Color Grading',
-	'Motion Graphics',
+	'Short-form Video Editing',
+	'Trend Analysis',
+	'Audience Engagement',
 ];
 
 const AboutMeBio = () => {
@@ -25,7 +24,7 @@ const AboutMeBio = () => {
 				<img
 					src={profileImage}
 					className="profile-image w-64 sm:w-full max-w-xs"
-					alt="Kamal"
+					alt="Raghav"
 				/>
 			</div>
 

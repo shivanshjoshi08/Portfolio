@@ -9,31 +9,29 @@ import Image6 from '../images/ui-project-2.jpg';
 import {
 	FiInstagram,
 	FiLinkedin,
-	FiTwitter,
-	FiYoutube,
 } from 'react-icons/fi';
 
 export const singleProjectData = {
-	category: 'Wedding Reels',
+	category: 'Instagram Reels',
 	ProjectHeader: {
-		title: 'Wedding Cinematic Teaser',
+		title: 'Marketing Explanation Reel',
 		publishDate: 'Jan 15, 2024',
 		tags: 'Video Editing / Color Grading',
 	},
 	ProjectImages: [
 		{
 			id: 1,
-			title: 'Wedding Teaser - Scene 1',
+			title: 'Reel - Scene 1',
 			img: Image1,
 		},
 		{
 			id: 2,
-			title: 'Wedding Teaser - Scene 2',
+			title: 'Reel - Scene 2',
 			img: Image2,
 		},
 		{
 			id: 3,
-			title: 'Wedding Teaser - Scene 3',
+			title: 'Reel - Scene 3',
 			img: Image3,
 		},
 	],
@@ -53,17 +51,17 @@ export const singleProjectData = {
 			{
 				id: 3,
 				title: 'Category',
-				details: 'Wedding Reels',
+				details: 'Instagram Reels',
 			},
 			{
 				id: 4,
 				title: 'Duration',
-				details: '2 min 30 sec',
+				details: '1 min 48 sec',
 			},
 		],
 		ObjectivesHeading: 'Objective',
 		ObjectivesDetails:
-			'Create a captivating cinematic teaser that captures the essence of the wedding day, highlighting key emotional moments with smooth transitions and professional color grading.',
+			'Create captivating reels and video edits that capture attention, highlight key moments with smooth transitions and professional color grading.',
 		Technologies: [
 			{
 				title: 'Tools & Software',
@@ -82,44 +80,32 @@ export const singleProjectData = {
 			{
 				id: 1,
 				details:
-					'This cinematic wedding teaser was filmed across multiple locations over two days. The edit focuses on emotional storytelling through carefully selected moments, seamless transitions, and a custom color grade that brings warmth and cinematic depth to every frame.',
+					'This project involved creating engaging short-form video content optimized for social media platforms. The edit focuses on dynamic storytelling through carefully selected moments, seamless transitions, and a custom color grade.',
 			},
 			{
 				id: 2,
 				details:
-					'The audio design combines the couples chosen song with ambient sound captured on-site, creating an immersive viewing experience that transports the audience right into the celebration.',
+					'The audio design combines trending audio with ambient sound, creating an immersive viewing experience that hooks the audience from the first second.',
 			},
 			{
 				id: 3,
 				details:
-					'Post-production involved speed ramping for dramatic effect, smooth slow-motion sequences, and custom motion graphics for the couples names and wedding date that complement the overall aesthetic.',
+					'Post-production involved speed ramping for dramatic effect, smooth slow-motion sequences, and custom motion graphics that complement the overall aesthetic.',
 			},
 		],
 		SocialSharingHeading: 'Share This',
 		SocialSharing: [
 			{
 				id: 1,
-				name: 'Twitter',
-				icon: <FiTwitter />,
-				url: 'https://x.com/Maharaj_29?t=cZyHx_0FfBcz8bbE2iga9A&s=09',
+				name: 'Instagram',
+				icon: <FiInstagram />,
+				url: 'https://www.instagram.com/Joshi_raghavv/',
 			},
 			{
 				id: 2,
-				name: 'Instagram',
-				icon: <FiInstagram />,
-				url: 'https://www.instagram.com/kamaldeep_____/',
-			},
-			{
-				id: 4,
 				name: 'LinkedIn',
 				icon: <FiLinkedin />,
-				url: 'https://linkedin.com/',
-			},
-			{
-				id: 5,
-				name: 'Youtube',
-				icon: <FiYoutube />,
-				url: 'https://youtube.com/@kamal_deep29?si=gY9FtZfEpmd1KbCh',
+				url: 'https://www.linkedin.com/in/raghav-joshi-b52689394',
 			},
 		],
 	},
@@ -128,22 +114,22 @@ export const singleProjectData = {
 		Projects: [
 			{
 				id: 1,
-				title: 'Instagram Reel Edit',
+				title: 'Lights Edit',
 				img: Image4,
 			},
 			{
 				id: 2,
-				title: 'YouTube Long Edit',
+				title: 'Financial Reel',
 				img: Image5,
 			},
 			{
 				id: 3,
-				title: 'Social Media Campaign',
+				title: 'Landscape Aesthetic',
 				img: Image6,
 			},
 			{
 				id: 4,
-				title: 'Wedding Final Edit',
+				title: 'Fevicol',
 				img: Image3,
 			},
 		],

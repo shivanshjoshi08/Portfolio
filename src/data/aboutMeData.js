@@ -1,11 +1,7 @@
 export const aboutMeData = [
 	{
 		id: 1,
-		bio: 'Results-driven Social Media Manager with 2 years of experience in strategizing, managing, and optimizing brand presence on Instagram, Facebook, and YouTube. Successfully handled digital marketing for Gadget Gallary Official with over 17K+ subscribers on youtube and Anushashan with Amita and instagram influencer and dietician, increasing audience engagement and follower growth. ',
-	},
-	{
-		id: 2,
-		bio: 'Skilled in content creation, analytics, and community management. Proven ability to develop and execute effective social media campaigns that align with business goals and enhance brand visibility.',
+		bio: "I'm a Social Media and Content Marketing enthusiast currently pursuing B.A. (Hons) Business Economics from the University of Delhi. I have hands-on experience in content creation, short-form video editing, and social media growth through internships and college projects. I enjoy creating engaging reels and analysing audience insights to improve reach and engagement. I also use Excel for content planning and performance tracking, and I'm currently learning Adobe Premiere Pro to further improve my video editing skills.",
 	},
 ];
 
